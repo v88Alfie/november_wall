@@ -1,0 +1,290 @@
+@import "./global.less";
+
+body{
+    background-color: @dark_bg;
+
+    header{
+        align-items: center;
+        background-color: #1E1F25;
+        display: flex;
+        height: 62px;
+        padding: 0 26px 0 25px;
+
+        img{
+            margin-right: auto;
+        }
+
+        p{
+            color: @white;
+            font: 14px/16px @font-regular;
+            margin-right: 26px;
+        }
+
+        .logout_container{
+            border-left: 1px solid @dark_grey;
+            display: flex;
+            height: 100%;
+            padding-top: 25px;
+
+            a{
+                color: @white;
+                font: 14px/16px @font-regular;
+                margin-left: 26px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    #container{
+        margin: 49px auto;
+        width: 978px;
+
+        h2{
+            color: @white;
+            font: 21px/25px @font-regular;
+            margin-bottom: 8px;
+        }
+
+        >p{
+            font: 17.5px/20.5px @font-regular;
+            color: @font;
+            margin-bottom: 58px;
+        }
+
+        .topic_form_container{
+            align-items: center;
+            background-color: @dark_grey;
+            border-radius: 10px;
+            display: flex;
+            height: 80px;
+            padding: 0 20px;
+            width: 100%;
+
+            >form{
+                align-items: center;
+                display: flex;
+                column-gap: 15px;
+                width: 100%;
+
+                textarea{
+                    background-color: transparent;
+                    color: @white;
+                    font: 17.5px/25px @font-regular;
+                    height: 38px;
+                    width: 85%;
+
+                    &::placeholder{
+                        color: @font;
+                        vertical-align: middle;
+                    }
+                }
+
+                >button[type=submit]{
+                    background-color: @blue;
+                    border-radius: 8px;
+                    color: @white;
+                    cursor: pointer;
+                    font: 14px/40px @font-medium;
+                    height: 38px;
+                    margin-left: auto;
+                    width: 100px;
+
+                    &:hover{
+                        background-color: #0B53C1;
+                        opacity: 0.9;
+                    }
+                }
+            }
+
+        }
+
+        h3{
+            color: @white;
+            font: 16px/19px @font-regular;
+            margin-top: 56px;
+        }
+
+        #blank_topic_container{
+            align-items: center;
+            border-radius: 9px;
+            border: 1px dashed #6D6E75;
+            display: flex;
+            height: 89px;
+            justify-content: center;
+            margin-top: 53px;
+
+            p{
+                color: @white;
+                font: 16px/18px @font-regular;
+            }
+        }
+
+        #topic_lists{
+            .topic_container{
+                background-color: #1E1F25;
+                border-radius: 10px;
+                margin: 20px 0 30px 0;
+                padding: 23px 30px;
+
+                .post_text{
+                    color: @white;
+                    font: 16px/25px @font-italic;
+                    margin-bottom: 14px;
+                }
+
+                .details_container{
+                    align-items: center;
+                    display: flex;
+                    margin-bottom: 24px;
+
+                    >span,
+                    p{
+                        color: @violet;
+                        font: 14px/16px @font-regular;
+
+                        &:first-child{
+                            margin-right: 20px;
+                        }
+
+                        &:nth-child(3){
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .action_group{
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        margin-left: auto;
+
+                        button{
+                            background-color: #32333C;
+                            border-radius: 4px;
+                            border: 1px solid #606066;
+                            cursor: pointer;
+                            height: 29px;
+                            width: 29px;
+
+                            &:first-child{
+                                margin-right: 5px;
+                            }
+
+                            &.edit_comment_btn,
+                            &.edit_btn{
+                                &::after{
+                                    background: url(/assets/images/the_wall_sprite_icon.svg) no-repeat 5.5px 4px;
+                                    content: "";
+                                    display: inline-block;
+                                    height: 20px;
+                                    width: 20px;
+                                }
+                            }
+
+                            &.delete_comment_btn,
+                            &.delete_btn{
+                                &::after{
+                                    background: url(/assets/images/the_wall_sprite_icon.svg) no-repeat -17px 4px;
+                                    content: "";
+                                    display: inline-block;
+                                    height: 20px;
+                                    width: 20px;
+                                }
+                            }
+                        }
+                        
+                        p{
+                            border-left: none;
+                            border-radius: 4px;
+                            border: 1px solid #606066;
+                            color: @white;
+                            font: 14px/16px @font-medium;
+                            height: 29px;
+                            margin: 0;
+                            padding: 0 5px;
+
+                            button{
+                                background-color: transparent;
+                                border: none;
+                                font: 10px/12px @font-medium;
+                            }
+
+                            .no_comment_btn,
+                            .no_btn{
+                                color: @font;
+                            }
+
+                            .yes_comment_btn,
+                            .yes_btn{
+                                color: @violet;
+                            }
+                        }
+                    }
+                }
+
+                .edit_comment_form_container,
+                .comment_form_container{
+                    align-items: center;
+                    background-color: @dark_grey;
+                    border-radius: 10px;
+                    display: flex;
+                    height: 80px;
+                    padding: 0 20px;
+                    width: 100%;
+
+                    >form{
+                        align-items: center;
+                        display: flex;
+                        column-gap: 15px;
+                        width: 100%;
+        
+                        textarea{
+                            background-color: transparent;
+                            color: @white;
+                            font: 17.5px/25px @font-regular;
+                            height: 38px;
+                            width: 85%;
+        
+                            &::placeholder{
+                                color: @font;
+                                vertical-align: middle;
+                            }
+                        }
+        
+                        .save_comment_btn,
+                        .submit_comment_btn{
+                            background-color: @blue;
+                            border-radius: 8px;
+                            color: @white;
+                            cursor: pointer;
+                            font: 14px/40px @font-medium;
+                            height: 38px;
+                            margin-left: auto;
+                            width: 100px;
+        
+                            &:hover{
+                                background-color: #0B53C1;
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                }
+
+                .edit_comment_form_container{
+                    margin-bottom: 30px;
+                }
+
+                .comment_content{
+                    border-bottom: 1px solid #3F404A;
+                    margin-top: 30px;
+                    padding-left: 15px;
+
+                    >p{
+                        color: @common_text;
+                        font: 16px/25px @font-italic;
+                        margin-bottom: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

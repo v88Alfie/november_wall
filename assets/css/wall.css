@@ -1,0 +1,296 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Italic";
+  src: url(/assets/fonts/Roboto-Italic.ttf);
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(/assets/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url(/assets/fonts/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(/assets/fonts/Roboto-Light.ttf);
+}
+/* FONTS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+}
+body ul {
+  list-style-type: none;
+}
+body .hidden {
+  display: none !important;
+}
+body .input_error {
+  border: 1px solid #eb5757 !important;
+}
+body {
+  background-color: #2c2d34;
+}
+body header {
+  align-items: center;
+  background-color: #1E1F25;
+  display: flex;
+  height: 62px;
+  padding: 0 26px 0 25px;
+}
+body header img {
+  margin-right: auto;
+}
+body header p {
+  color: #ffffff;
+  font: 14px/16px "Roboto-Regular";
+  margin-right: 26px;
+}
+body header .logout_container {
+  border-left: 1px solid #3b3c43;
+  display: flex;
+  height: 100%;
+  padding-top: 25px;
+}
+body header .logout_container a {
+  color: #ffffff;
+  font: 14px/16px "Roboto-Regular";
+  margin-left: 26px;
+  text-decoration: none;
+}
+body #container {
+  margin: 49px auto;
+  width: 978px;
+}
+body #container h2 {
+  color: #ffffff;
+  font: 21px/25px "Roboto-Regular";
+  margin-bottom: 8px;
+}
+body #container > p {
+  font: 17.5px/20.5px "Roboto-Regular";
+  color: #6d7186;
+  margin-bottom: 58px;
+}
+body #container .topic_form_container {
+  align-items: center;
+  background-color: #3b3c43;
+  border-radius: 10px;
+  display: flex;
+  height: 80px;
+  padding: 0 20px;
+  width: 100%;
+}
+body #container .topic_form_container > form {
+  align-items: center;
+  display: flex;
+  column-gap: 15px;
+  width: 100%;
+}
+body #container .topic_form_container > form textarea {
+  background-color: transparent;
+  color: #ffffff;
+  font: 17.5px/25px "Roboto-Regular";
+  height: 38px;
+  width: 85%;
+}
+body #container .topic_form_container > form textarea::placeholder {
+  color: #6d7186;
+  vertical-align: middle;
+}
+body #container .topic_form_container > form > button[type=submit] {
+  background-color: #00a3ff;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font: 14px/40px "Roboto-Medium";
+  height: 38px;
+  margin-left: auto;
+  width: 100px;
+}
+body #container .topic_form_container > form > button[type=submit]:hover {
+  background-color: #0B53C1;
+  opacity: 0.9;
+}
+body #container h3 {
+  color: #ffffff;
+  font: 16px/19px "Roboto-Regular";
+  margin-top: 56px;
+}
+body #container #blank_topic_container {
+  align-items: center;
+  border-radius: 9px;
+  border: 1px dashed #6D6E75;
+  display: flex;
+  height: 89px;
+  justify-content: center;
+  margin-top: 53px;
+}
+body #container #blank_topic_container p {
+  color: #ffffff;
+  font: 16px/18px "Roboto-Regular";
+}
+body #container #topic_lists .topic_container {
+  background-color: #1E1F25;
+  border-radius: 10px;
+  margin: 20px 0 30px 0;
+  padding: 23px 30px;
+}
+body #container #topic_lists .topic_container .post_text {
+  color: #ffffff;
+  font: 16px/25px "Roboto-Italic";
+  margin-bottom: 14px;
+}
+body #container #topic_lists .topic_container .details_container {
+  align-items: center;
+  display: flex;
+  margin-bottom: 24px;
+}
+body #container #topic_lists .topic_container .details_container > span,
+body #container #topic_lists .topic_container .details_container p {
+  color: #a2a2ff;
+  font: 14px/16px "Roboto-Regular";
+}
+body #container #topic_lists .topic_container .details_container > span:first-child,
+body #container #topic_lists .topic_container .details_container p:first-child {
+  margin-right: 20px;
+}
+body #container #topic_lists .topic_container .details_container > span:nth-child(3),
+body #container #topic_lists .topic_container .details_container p:nth-child(3) {
+  margin-left: 20px;
+}
+body #container #topic_lists .topic_container .details_container .action_group {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+}
+body #container #topic_lists .topic_container .details_container .action_group button {
+  background-color: #32333C;
+  border-radius: 4px;
+  border: 1px solid #606066;
+  cursor: pointer;
+  height: 29px;
+  width: 29px;
+}
+body #container #topic_lists .topic_container .details_container .action_group button:first-child {
+  margin-right: 5px;
+}
+body #container #topic_lists .topic_container .details_container .action_group button.edit_comment_btn::after,
+body #container #topic_lists .topic_container .details_container .action_group button.edit_btn::after {
+  background: url(/assets/images/the_wall_sprite_icon.svg) no-repeat 5.5px 4px;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+body #container #topic_lists .topic_container .details_container .action_group button.delete_comment_btn::after,
+body #container #topic_lists .topic_container .details_container .action_group button.delete_btn::after {
+  background: url(/assets/images/the_wall_sprite_icon.svg) no-repeat -17px 4px;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+body #container #topic_lists .topic_container .details_container .action_group p {
+  border-left: none;
+  border-radius: 4px;
+  border: 1px solid #606066;
+  color: #ffffff;
+  font: 14px/16px "Roboto-Medium";
+  height: 29px;
+  margin: 0;
+  padding: 0 5px;
+}
+body #container #topic_lists .topic_container .details_container .action_group p button {
+  background-color: transparent;
+  border: none;
+  font: 10px/12px "Roboto-Medium";
+}
+body #container #topic_lists .topic_container .details_container .action_group p .no_comment_btn,
+body #container #topic_lists .topic_container .details_container .action_group p .no_btn {
+  color: #6d7186;
+}
+body #container #topic_lists .topic_container .details_container .action_group p .yes_comment_btn,
+body #container #topic_lists .topic_container .details_container .action_group p .yes_btn {
+  color: #a2a2ff;
+}
+body #container #topic_lists .topic_container .edit_comment_form_container,
+body #container #topic_lists .topic_container .comment_form_container {
+  align-items: center;
+  background-color: #3b3c43;
+  border-radius: 10px;
+  display: flex;
+  height: 80px;
+  padding: 0 20px;
+  width: 100%;
+}
+body #container #topic_lists .topic_container .edit_comment_form_container > form,
+body #container #topic_lists .topic_container .comment_form_container > form {
+  align-items: center;
+  display: flex;
+  column-gap: 15px;
+  width: 100%;
+}
+body #container #topic_lists .topic_container .edit_comment_form_container > form textarea,
+body #container #topic_lists .topic_container .comment_form_container > form textarea {
+  background-color: transparent;
+  color: #ffffff;
+  font: 17.5px/25px "Roboto-Regular";
+  height: 38px;
+  width: 85%;
+}
+body #container #topic_lists .topic_container .edit_comment_form_container > form textarea::placeholder,
+body #container #topic_lists .topic_container .comment_form_container > form textarea::placeholder {
+  color: #6d7186;
+  vertical-align: middle;
+}
+body #container #topic_lists .topic_container .edit_comment_form_container > form .save_comment_btn,
+body #container #topic_lists .topic_container .comment_form_container > form .save_comment_btn,
+body #container #topic_lists .topic_container .edit_comment_form_container > form .submit_comment_btn,
+body #container #topic_lists .topic_container .comment_form_container > form .submit_comment_btn {
+  background-color: #00a3ff;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font: 14px/40px "Roboto-Medium";
+  height: 38px;
+  margin-left: auto;
+  width: 100px;
+}
+body #container #topic_lists .topic_container .edit_comment_form_container > form .save_comment_btn:hover,
+body #container #topic_lists .topic_container .comment_form_container > form .save_comment_btn:hover,
+body #container #topic_lists .topic_container .edit_comment_form_container > form .submit_comment_btn:hover,
+body #container #topic_lists .topic_container .comment_form_container > form .submit_comment_btn:hover {
+  background-color: #0B53C1;
+  opacity: 0.9;
+}
+body #container #topic_lists .topic_container .edit_comment_form_container {
+  margin-bottom: 30px;
+}
+body #container #topic_lists .topic_container .comment_content {
+  border-bottom: 1px solid #3F404A;
+  margin-top: 30px;
+  padding-left: 15px;
+}
+body #container #topic_lists .topic_container .comment_content > p {
+  color: #9496a1;
+  font: 16px/25px "Roboto-Italic";
+  margin-bottom: 14px;
+}

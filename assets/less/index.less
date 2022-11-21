@@ -1,0 +1,124 @@
+@import "./global.less";
+
+body{
+    background-color: #2C2D34;
+    display: flex;
+
+    #container{
+        display: flex;
+        margin: auto;
+        padding: 221px 0;
+        width: 876px;
+
+        img{
+            margin-right: 30px;
+        }
+
+        #form_section{
+            background-color: @bg;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            border: 1px solid transparent;
+            flex: 1;
+            padding: 75px 78px;
+
+            .form_header{
+                display: inline-block;
+                margin-bottom: 50px;
+                vertical-align: middle;
+
+                h1{
+                    color: @white;
+                    font: 21px/24px @font-regular;
+                    margin-bottom: 4px;
+                }
+
+                p{
+                    color: @font;
+                    font: 17.5px/20px @font-regular;
+                }
+
+            }
+
+            #name_form_group{
+                column-gap: 15px;
+                display: flex;
+            }
+
+            .form_group{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 18px;
+                width: 100%;
+
+                label{
+                    color: @font;
+                    font: 14px/16px @font-medium;
+                    margin-bottom: 9px;
+                }
+
+                input{
+                    background-color: @input_bg;
+                    border-radius: 9px;
+                    color: @white;
+                    font: 16px/16px @font-regular;
+                    height: 60px;
+                    padding: 0 20px;
+
+                    &:focus{
+                        border: 1px solid @blue;
+                    }
+                }
+            }
+
+            button[type=submit]{
+                background-color: @blue;
+                border-radius: 9px;
+                color: @white;
+                cursor: pointer;
+                font: 21px/25px @font-bold;
+                height: 60px;
+                margin: 30px 0 40px 0;
+                width: 100%;
+            }
+
+            p{
+                font: 17.5px/21px @font-regular;
+                color: @font;
+                text-align: center;
+            }
+
+            button[type="button"]{
+                background-color: transparent;
+                color: @blue;
+                cursor: pointer;
+                font: 17.5px/21px @font-regular;
+            }
+        }
+
+        .right_section_logo{
+            background-color: #3B3C43 !important;
+            background: url(/assets/images/right_panel_bg.svg) no-repeat;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: 75px 51px;
+            width: 205px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px){
+    body{
+        #container{
+            padding: 120px 30px;
+        }
+
+        #form_section{
+            border-radius: 20px;
+        }
+
+        .right_section_logo{
+            display: none;
+        }
+    }
+}
